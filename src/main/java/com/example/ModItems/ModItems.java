@@ -17,6 +17,7 @@ import java.util.function.Function;
 public class ModItems {
 
     public static final Item WATER_RUNE = registerItem("water_rune", Item::new, new Item.Settings());
+    public static final Item FIRE_RUNE = registerItem("fire_rune", Item::new, new Item.Settings().fireproof());
 
     public static Item registerItem(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
         // Create the item key.
@@ -33,6 +34,7 @@ public class ModItems {
 
     private static void customIngredients(FabricItemGroupEntries entries) {
         entries.add(WATER_RUNE);
+        entries.add(FIRE_RUNE);
     }
 
     public static void registerModItems() {
